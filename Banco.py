@@ -17,7 +17,7 @@ class contaBancaria:
 
     def sacar(self,valorsacado):
         if valorsacado > self.limite:
-            print("É possível sacar pois tem R$:",self.limite,"no banco, e o valor de saque R$:",valorsacado, 'é viável')
+            print("O valor de saque é de R$:",valorsacado,"e o valor limite é R$:",self.limite,"a transação não foi efetuada")
         elif valorsacado > self.saldo:
             print("Não é possível sacar, pois R$:",valorsacado,"é mais do que tem no banco R$:",self.limite)
         else:
@@ -33,8 +33,8 @@ class contaBancaria:
             print("A conta já está ativa")
 
 
-conta1 = contaBancaria(12345,4000,"lucas","Poupança",8000)
+conta1 = contaBancaria(12345,4000,"lucas","Poupança",4000)
 conta1.contaAtivaInativa()
 conta1.verificarSaldo()
-conta1.sacar(700)
+conta1.sacar(4000)
 conta1.depositar(10)
